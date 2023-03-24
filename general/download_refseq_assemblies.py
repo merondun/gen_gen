@@ -34,7 +34,6 @@ def download_refseq_files(refseq_accession):
     # Download files
     dir_name = refseq_accession
     os.makedirs(dir_name, exist_ok=True)
-
     try:
         ftp = ftplib.FTP(ftp_server)
         ftp.login()
@@ -59,3 +58,4 @@ if __name__ == "__main__":
 
     refseq_accession = sys.argv[1]
     download_refseq_files(refseq_accession)
+
